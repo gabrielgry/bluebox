@@ -29,10 +29,6 @@ modules:
       - gnome-shell-extension-apps-menu
       - gnome-classic-session
 
-  - type: bling
-    install:
-      - 1password
-      - dconf-update-service
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -55,13 +51,19 @@ modules:
         - org.gnome.clocks
     user: {} # Also add Flathub user repo, but no user packages
 
+  - type: bling
+    install:
+      - 1password
+      - dconf-update-service
+
   - type: fonts
     fonts:
       nerd-fonts:
         - JetBrainsMono
 
-  # - type: gnome-extensions
-  #   install:
+  - type: gnome-extensions
+    install:
+      - 1262 # Bing Wallpaper
 
   - type: gschema-overrides
     include:
