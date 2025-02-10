@@ -1,0 +1,17 @@
+[org.gnome.desktop.interface]
+monospace-font-name='JetBrainsMono Nerd Font 10'
+color-scheme='prefer-dark'
+
+[org.gnome.settings-daemon.plugins.media-keys]
+volume-step=2
+
+[org.gnome.settings-daemon.plugins.power]
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-type='nothing'
+
+[org.gnome.mutter]
+#dynamic-workspaces=false
+
+[org.gnome.desktop.wm.preferences]
+#num-workspaces=10
+auto-raise=true
