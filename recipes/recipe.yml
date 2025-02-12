@@ -67,7 +67,7 @@ modules:
 
   - type: gschema-overrides
     include:
-      - gnome-settings.gschema.override 
-      - gnome-extensions.gschema.override
+      - zz1-gnome-settings.gschema.override 
+      - zz1-gnome-extensions.gschema.override
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
