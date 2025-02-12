@@ -29,7 +29,6 @@ modules:
       - gnome-shell-extension-apps-menu
       - gnome-classic-session
 
-
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -64,6 +63,7 @@ modules:
   - type: gnome-extensions
     install:
       - 1262 # Bing Wallpaper
+      - 1460 # Vitals
 
   - type: gschema-overrides
     include:

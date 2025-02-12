@@ -1,0 +1,15 @@
+[org.gnome.shell]
+enabled-extensions=['BingWallpaper@ineffable-gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'Vitals@CoreCoding.com']
+
+
+[org.gnome.shell.extensions.bingwallpaper]
+download-folder='~/Vault/Archive/Wallpapers/BingWallpaper'
+market='pt-BR'
+resolution='UHD'
+
+[org.gnome.shell.extensions.vitals]
+hot-sensors=['_memory_usage_', '__network-rx_max__', '_temperature_processor_0_', '_processor_usage_']
+show-fan=false
+show-storage=false
+show-system=false
+show-voltage=false
