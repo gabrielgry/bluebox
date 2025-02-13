@@ -1,7 +1,8 @@
 [org.gnome.shell]
-enabled-extensions=['BingWallpaper@ineffable-gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'Vitals@CoreCoding.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com','Vitals@CoreCoding.com','BingWallpaper@ineffable-gmail.com']
 
 [org.gnome.shell.extensions.bingwallpaper]
+hide=true
 download-folder='~/Vault/Archive/Wallpapers/BingWallpaper'
 market='pt-BR'
 resolution='UHD'
@@ -12,3 +13,4 @@ show-fan=false
 show-storage=false
 show-system=false
 show-voltage=false
+menu-centered=true
