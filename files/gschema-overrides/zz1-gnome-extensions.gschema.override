@@ -3,7 +3,6 @@ enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com','Vitals@CoreCoding.
 
 [org.gnome.shell.extensions.bingwallpaper]
 hide=true
-download-folder='~/Vault/Archive/Wallpapers/BingWallpaper'
 market='pt-BR'
 resolution='UHD'
 
