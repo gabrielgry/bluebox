@@ -27,6 +27,7 @@ modules:
       - gnome-shell-extension-places-menu
       - gnome-shell-extension-apps-menu
       - gnome-classic-session
+      - fedora-bookmarks
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
