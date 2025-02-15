@@ -19,8 +19,7 @@ modules:
 
   - type: rpm-ostree
     # repos:
-    install:
-      - gnome-shell-extension-appindicator
+    install: [] 
     remove:
       - gnome-shell-extension-window-list
       - gnome-shell-extension-background-logo
@@ -64,6 +63,7 @@ modules:
     install:
       - 1262 # Bing Wallpaper
       - 1460 # Vitals
+      - 615  # AppIndicator and KStatusNotifierItem Support
 
   - type: gschema-overrides
     include:
