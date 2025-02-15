@@ -70,4 +70,9 @@ modules:
       - zz1-gnome-settings.gschema.override 
       - zz1-gnome-extensions.gschema.override
 
+  - type: chezmoi
+    repository: "https://github.com/gabrielgry/dotfiles"
+    all-users: true
+    file-conflict-policy: replace
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
