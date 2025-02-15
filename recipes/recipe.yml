@@ -74,6 +74,7 @@ modules:
   - type: chezmoi
     repository: "https://github.com/gabrielgry/dotfiles"
     all-users: true
+    disable-update: true
     file-conflict-policy: replace
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
