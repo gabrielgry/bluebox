@@ -21,7 +21,7 @@
 pref("content.notify.interval", 100000);
 
 /** GFX ***/
-pref("gfx.canvas.accelerated.cache-items", 4096);
+// pref("gfx.canvas.accelerated.cache-items", 4096);
 pref("gfx.canvas.accelerated.cache-size", 512);
 pref("gfx.content.skia-font-cache-size", 20);
 
@@ -53,15 +53,15 @@ pref("network.ssl_tokens_cache_capacity", 10240);
 
 /** EXPERIMENTAL ***/
 pref("layout.css.grid-template-masonry-value.enabled", true);
-pref("dom.enable_web_task_scheduling", true);
+// pref("dom.enable_web_task_scheduling", true);
 
 /****************************************************************************
  * SECTION: SECUREFOX                                                       *
 ****************************************************************************/
 /** TRACKING PROTECTION ***/
 pref("browser.contentblocking.category", "strict");
-pref("urlclassifier.trackingSkipURLs", "*.reddit.com, *.twitter.com, *.twimg.com, *.tiktok.com");
-pref("urlclassifier.features.socialtracking.skipURLs", "*.instagram.com, *.twitter.com, *.twimg.com");
+pref("urlclassifier.trackingSkipURLs", "embed.reddit.com");
+pref("extensions.webcompat.smartblockEmbeds.enabled", true);
 pref("browser.download.start_downloads_in_tmp_dir", true);
 pref("browser.helperApps.deleteTempFileOnExit", true);
 pref("browser.uitour.enabled", false);
@@ -195,7 +195,6 @@ pref("full-screen-api.warning.timeout", 0);
 pref("browser.urlbar.suggest.calculator", true);
 pref("browser.urlbar.unitConversion.enabled", true);
 pref("browser.urlbar.trending.featureGate", false);
-pref("browser.urlbar.suggest.topsites", false);
 
 /** NEW TAB PAGE ***/
 pref("browser.newtabpage.activity-stream.feeds.topsites", false);
@@ -226,12 +225,14 @@ pref("layout.word_select.eat_space_to_next_word", false);
 
 // PREF: revert back to Standard ETP
 pref("browser.contentblocking.category", "standard");
-
 pref("browser.newtabpage.activity-stream.default.sites", "");
 pref("browser.newtabpage.pinned", "[]");
+pref("browser.urlbar.suggest.topsites", false);
 
 pref("media.ffmpeg.vaapi.enabled", true); // Enable VAAPI because is disable by default for Nvidia
 pref("media.av1.enabled", false); // Disable AV1 support because my current hardware doesn't support hardware decoding
+
+pref("identity.fxaccounts.toolbar.pxiToolbarEnabled", false);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
