@@ -19,7 +19,8 @@ modules:
 
   - type: rpm-ostree
     # repos:
-    install: [] 
+    install: 
+      - gnome-themes-extra
     remove:
       - gnome-shell-extension-window-list
       - gnome-shell-extension-background-logo
@@ -78,8 +79,7 @@ modules:
     file-conflict-policy: replace
 
   - type: script
-    snippets:
-      - "flatpak override --env=GTK_THEME=Adwaita:dark" # Fix Qt dark theme
+    snippets: []
     scripts: []
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

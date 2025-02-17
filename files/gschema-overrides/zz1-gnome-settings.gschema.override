@@ -1,6 +1,7 @@
 [org.gnome.desktop.interface]
 monospace-font-name='JetBrainsMono Nerd Font 10'
 color-scheme='prefer-dark'
+gtk-theme='Adwaita-dark'
 
 [org.gnome.settings-daemon.plugins.media-keys]
 volume-step=2
