@@ -1,0 +1,69 @@
+{
+        "policies": {
+                "AppAutoUpdate": true,
+                "AutofillCreditCardEnabled": false,
+                "DisableFirefoxStudies": true,
+                "DisableTelemetry": true,
+                "DisableFeedbackCommands": true,
+                "DisablePocket": true,
+                "DisableSetDesktopBackground": true,
+                "DisableDeveloperTools": false,
+		"DisplayBookmarksToolbar": true,
+                "DontCheckDefaultBrowser": true,
+                "PasswordManagerEnabled": false,
+                "OfferToSaveLogins": false,
+                "NoDefaultBookmarks": true,
+                "ExtensionSettings": {
+                        "{d634138d-c276-4fc8-924b-40a0ea21d284}": {
+                                "installation_mode": "normal_installed",
+                                "install_url": "https://addons.mozilla.org/firefox/downloads/latest/{d634138d-c276-4fc8-924b-40a0ea21d284}/latest.xpi",
+                                "default_area": "navbar"
+                        },
+                        "uBlock0@raymondhill.net": {
+                                "installation_mode": "normal_installed",
+                                "install_url": "https://addons.mozilla.org/firefox/downloads/latest/uBlock0@raymondhill.net/latest.xpi",
+                                "default_area": "navbar"
+                        },
+                        "addon@darkreader.org": {
+                                "installation_mode": "normal_installed",
+                                "install_url": "https://addons.mozilla.org/firefox/downloads/latest/addon@darkreader.org/latest.xpi",
+                                "default_area": "navbar"
+                        }
+                },
+                "FirefoxHome": {
+                      "Search": true,
+                      "TopSites": false,
+                      "SponsoredTopSites": false,
+                      "Highlights": false,
+                      "Pocket": false,
+                      "SponsoredPocket": false,
+                      "Snippets": false,
+                      "Locked": false
+                },
+                "FirefoxSuggest": {
+                      "WebSuggestions": false,
+                      "SponsoredSuggestions": false,
+                      "ImproveSuggest": false,
+                      "Locked": false
+                },
+                "UserMessaging": {
+                      "ExtensionRecommendations": false,
+                      "FeatureRecommendations": false,
+                      "UrlbarInterventions": false,
+                      "SkipOnboarding": true,
+                      "MoreFromMozilla": false,
+                      "FirefoxLabs": true,
+                      "Locked": false
+                },
+                "Homepage": {
+                      "URL": "about:home",
+                      "Additional": [],
+                      "StartPage": "homepage",
+                      "Locked": false
+                },
+                "SearchEngines": {
+                        "PreventInstalls": false,
+                        "Default": "DuckDuckGo"
+                }
+        }
+}
