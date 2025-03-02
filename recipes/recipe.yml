@@ -79,7 +79,8 @@ modules:
     file-conflict-policy: replace
 
   - type: script
-    snippets: []
+    snippets:
+      - echo 'import? "~/.local/share/just/justfile"' >> /usr/share/ublue-os/justfile
     scripts: []
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
