@@ -3,5 +3,5 @@ custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybin
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 name='Open terminal'
-command='ptyxis -s'
+command='ptyxis -s -x "ujust devbox-enter"'
 binding='<Super>Return'
