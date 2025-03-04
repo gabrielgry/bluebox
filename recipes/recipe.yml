@@ -79,7 +79,8 @@ modules:
     file-conflict-policy: replace
 
   - type: script
-    snippets: []
+    snippets:
+      - dnf5 group install cosmic-desktop -y
     scripts: []
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
