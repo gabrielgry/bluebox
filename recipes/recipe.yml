@@ -17,6 +17,17 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: copy
+    from: ghcr.io/ublue-os/akmods-nvidia:main-42 
+    src: /rpms/
+    dest: /tmp/akmods-rpms
+
+  - type: script
+    snippets:
+      - dnf5 group install cosmic-desktop -y
+    scripts:
+      - nvidia.sh
+
   - type: rpm-ostree
     # repos:
     install: 
@@ -78,10 +89,5 @@ modules:
     all-users: true
     disable-update: true
     file-conflict-policy: replace
-
-  - type: script
-    snippets:
-      - dnf5 group install cosmic-desktop -y
-    scripts: []
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
