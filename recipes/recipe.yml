@@ -21,6 +21,7 @@ modules:
     # repos:
     install: 
       - gnome-themes-extra
+      - gnome-shell-extension-appindicator
     remove:
       - gnome-shell-extension-window-list
       - gnome-shell-extension-background-logo
@@ -65,7 +66,7 @@ modules:
     install:
       - 1262 # Bing Wallpaper
       - 1460 # Vitals
-      - 615  # AppIndicator and KStatusNotifierItem Support
+      # - 615  # AppIndicator and KStatusNotifierItem Support # Currently no support for Gnome 48
 
   - type: gschema-overrides
     include:
