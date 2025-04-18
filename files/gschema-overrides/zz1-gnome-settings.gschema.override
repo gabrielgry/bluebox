@@ -12,6 +12,7 @@ sleep-inactive-battery-type='nothing'
 
 [org.gnome.mutter]
 dynamic-workspaces=false
+experimental-features=['kms-modifiers']
 
 [org.gnome.desktop.wm.preferences]
 num-workspaces=10
