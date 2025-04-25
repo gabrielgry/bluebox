@@ -4,14 +4,10 @@ set -euoxv pipefail
 
 sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/negativo17-*.repo
 
-dnf5 install -y /tmp/akmods-rpms/ublue-os/ublue-os-nvidia*.rpm
-dnf5 install -y /tmp/akmods-rpms/kmods/kmod-nvidia*.rpm
+curl -Lo /tmp/install-kernel-akmods.sh https://github.com/ublue-os/bluefin/blob/main/build_files/base/03-install-kernel-akmods.sh
 
-# Install Nvidia RPMs
-curl -Lo /tmp/nvidia-install.sh https://raw.githubusercontent.com/ublue-os/hwe/main/nvidia-install.sh # Change when nvidia-install.sh updates
-chmod +x /tmp/nvidia-install.sh
-IMAGE_NAME="silverblue" RPMFUSION_MIRROR="" /tmp/nvidia-install.sh
-rm -f /usr/share/vulkan/icd.d/nouveau_icd.*.json
-ln -sf libnvidia-ml.so.1 /usr/lib64/libnvidia-ml.so
+chmod +x /tmp/install-kernel-akmods.sh
+
+BASE_IMAGE_NAME="silverblue" UBLUE_IMAGE_TAG="42" RPMFUSION_MIRROR="" AKMODS_FLAVOR="main" KERNEL="42-6.14.2-300" /tmp/install-kernel-akmods.sh
 
 sed -i 's/enabled=1/enabled=0/' /etc/yum.repos.d/negativo17-*.repo
