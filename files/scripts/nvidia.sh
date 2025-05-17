@@ -7,7 +7,7 @@ curl -Lo /tmp/install-kernel-akmods.sh https://raw.githubusercontent.com/ublue-o
 
 chmod +x /tmp/install-kernel-akmods.sh
 
-BASE_IMAGE_NAME="silverblue" UBLUE_IMAGE_TAG="42" RPMFUSION_MIRROR="" AKMODS_FLAVOR="main" KERNEL="6.14.2-300.fc42.x86_64" IMAGE_NAME="silverblue-nvidia" /tmp/install-kernel-akmods.sh
+BASE_IMAGE_NAME="silverblue" UBLUE_IMAGE_TAG="42" RPMFUSION_MIRROR="" AKMODS_FLAVOR="main" KERNEL="6.14.5-300.fc42.x86_64" IMAGE_NAME="silverblue-nvidia" /tmp/install-kernel-akmods.sh
 
 curl -Lo /tmp/initramfs.sh https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/19-initramfs.sh
 chmod +x /tmp/initramfs.sh
