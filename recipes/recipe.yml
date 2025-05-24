@@ -6,7 +6,7 @@ name: bluebox
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/silverblue-nvidia
 image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -20,8 +20,8 @@ modules:
   - type: script
     snippets: []
       #- dnf5 group install cosmic-desktop -y
-    scripts:
-      - nvidia.sh
+    scripts: []
+      #- nvidia.sh
 
   - type: rpm-ostree
     # repos:
@@ -48,6 +48,7 @@ modules:
         - com.github.xournalpp.xournalpp
         - org.gnome.Extensions
         - org.videolan.VLC
+        - org.gnome.Papers
       remove:
         - org.gnome.Weather
         - org.fedoraproject.MediaWriter
