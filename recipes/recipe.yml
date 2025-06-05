@@ -18,7 +18,7 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: script
-    snippets: []
+    snippets:
       - dnf5 group install cosmic-desktop -y
     scripts: []
       #- nvidia.sh
