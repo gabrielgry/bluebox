@@ -25,7 +25,9 @@ modules:
 
   - type: rpm-ostree
     # repos:
-    install: 
+    install:
+      - rEFInd
+      - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
       - gnome-themes-extra
       - gnome-shell-extension-appindicator
     remove:
