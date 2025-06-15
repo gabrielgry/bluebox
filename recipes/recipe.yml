@@ -38,6 +38,8 @@ modules:
       - gnome-shell-extension-apps-menu
       - gnome-classic-session
       - fedora-bookmarks
+    optfix:
+      - google-chrome-stable
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
