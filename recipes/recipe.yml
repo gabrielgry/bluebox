@@ -20,7 +20,7 @@ modules:
   - type: script
     snippets:
       - dnf5 config-manager setopt google-chrome.enabled=1
-      - dnf5 group install cosmic-desktop -y
+      - dnf5 group install plasma-desktop -y
     scripts: []
       #- nvidia.sh
 
