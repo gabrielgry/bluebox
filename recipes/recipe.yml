@@ -21,6 +21,7 @@ modules:
     snippets:
       - dnf5 config-manager setopt google-chrome.enabled=1
       - dnf5 group install kde-desktop -y
+      - dnf5 group install cosmic-desktop -y
     scripts: []
       #- nvidia.sh
 
