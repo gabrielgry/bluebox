@@ -20,7 +20,8 @@ modules:
   - type: script
     snippets:
       - dnf5 config-manager setopt google-chrome.enabled=1
-    scripts: []
+    scripts:
+      - lazygit.sh
 
   - type: dnf
     install:
@@ -51,6 +52,11 @@ modules:
         - fedora-bookmarks
     optfix:
       - google
+
+  - type: script
+    snippets:
+      - dnf5 config-manager setopt google-chrome.enabled=0
+    scripts: []
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -100,4 +106,12 @@ modules:
     disable-update: true
     file-conflict-policy: replace
 
+  - type: kargs
+    arch: x86_64
+    kargs:
+      - append-if-missing=nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1
+      - append-if-missing=nvidia.NVreg_PreserveVideoMemoryAllocations=1
+      - append-if-missing=nvidia.NVreg_TemporaryFilePath=/var/tmp
+
+  - type: initramfs
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

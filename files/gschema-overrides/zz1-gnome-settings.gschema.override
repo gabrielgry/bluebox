@@ -10,9 +10,9 @@ volume-step=2
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
 
-[org.gnome.mutter]
+[org.gnome.mutter:GNOME]
 dynamic-workspaces=false
-experimental-features=['kms-modifiers']
+experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling', 'kms-modifiers']
 
 [org.gnome.desktop.wm.preferences]
 num-workspaces=10
