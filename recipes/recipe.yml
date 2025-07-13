@@ -28,6 +28,20 @@ modules:
   - type: dnf
     install:
       packages:
+        - zsh
+        - fzf
+        - fd
+        - rustup
+        - git
+        - chezmoi
+        - neovim
+        - ripgrep
+        - trash-cli
+        - nodejs
+        - eza
+        - zoxide
+        - graphviz
+        - java-latest-openjdk
         - rEFInd
         - google-chrome-stable
         - gnome-themes-extra
