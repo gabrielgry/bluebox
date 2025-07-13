@@ -109,9 +109,9 @@ modules:
   - type: kargs
     arch: x86_64
     kargs:
-      - append-if-missing=nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1
-      - append-if-missing=nvidia.NVreg_PreserveVideoMemoryAllocations=1
-      - append-if-missing=nvidia.NVreg_TemporaryFilePath=/var/tmp
+      - nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1
+      - nvidia.NVreg_PreserveVideoMemoryAllocations=1
+      - nvidia.NVreg_TemporaryFilePath=/var/tmp
 
   - type: initramfs
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
