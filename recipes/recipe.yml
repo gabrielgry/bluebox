@@ -20,10 +20,7 @@ modules:
   - type: script
     snippets:
       - dnf5 config-manager setopt google-chrome.enabled=1
-      - dnf5 group install kde-desktop -y
-      - dnf5 group install cosmic-desktop -y
     scripts: []
-      #- nvidia.sh
 
   - type: dnf
     install:
@@ -33,18 +30,15 @@ modules:
         - fd
         - rustup
         - git
-        - chezmoi
         - neovim
         - ripgrep
         - trash-cli
         - nodejs
-        - eza
         - zoxide
-        - graphviz
-        - java-latest-openjdk
+        - lsd # ls alternative with icon support
         - rEFInd
         - google-chrome-stable
-        - gnome-themes-extra
+        - gnome-themes-extra # Gtk 3 themes
         - gnome-shell-extension-appindicator
     remove:
       packages:
@@ -94,7 +88,6 @@ modules:
     install:
       - 1262 # Bing Wallpaper
       - 1460 # Vitals
-      # - 615  # AppIndicator and KStatusNotifierItem Support # Currently no support for Gnome 48
 
   - type: gschema-overrides
     include:
