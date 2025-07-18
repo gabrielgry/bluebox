@@ -24,8 +24,14 @@ modules:
       - lazygit.sh
 
   - type: dnf
+    repos:
+      files:
+        - vscode.repo
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
     install:
       packages:
+        - code
         - zsh
         - fzf
         - fd
