@@ -3,12 +3,16 @@ monospace-font-name='JetBrainsMono Nerd Font 10'
 color-scheme='prefer-dark'
 gtk-theme='Adwaita-dark'
 
+[org.gnome.desktop.session]
+idle-delay=0
+
 [org.gnome.settings-daemon.plugins.media-keys]
 volume-step=2
 
 [org.gnome.settings-daemon.plugins.power]
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
+idle-dim=false
 
 [org.gnome.mutter:GNOME]
 dynamic-workspaces=false
