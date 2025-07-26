@@ -68,6 +68,7 @@ modules:
   - type: script
     snippets:
       - dnf5 config-manager setopt google-chrome.enabled=0
+      - rm -f /usr/share/epiphany/default-bookmarks.rdf
     scripts: []
 
   - type: default-flatpaks
