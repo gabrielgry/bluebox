@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v2.json
 # image will be published to ghcr.io/gabrielgry/bluebox
 name: bluebox
 # description will be included in the image's metadata
@@ -25,6 +25,9 @@ modules:
 
   - type: dnf
     repos:
+      copr:
+        - scottames/ghostty
+        - monkeygold/nautilus-open-any-terminal
       files:
         - vscode.repo
       keys:
@@ -32,6 +35,8 @@ modules:
     install:
       packages:
         - code
+        - ghostty
+        - nautilus-python # Dependency for "Open in Ghostty" in Nautilus
         - zsh
         - fzf
         - fd
@@ -56,6 +61,7 @@ modules:
         - gnome-shell-extension-apps-menu
         - gnome-classic-session
         - fedora-bookmarks
+        - ptyxis
     optfix:
       - google
 
@@ -65,26 +71,21 @@ modules:
     scripts: []
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      install:
-        - com.spotify.Client
-        - ca.desrt.dconf-editor
-        - org.qbittorrent.qBittorrent
-        - com.github.xournalpp.xournalpp
-        - org.gnome.Extensions
-        - org.videolan.VLC
-        - org.gnome.Papers
-      remove:
-        - org.gnome.Weather
-        - org.fedoraproject.MediaWriter
-        - org.gnome.Calendar
-        - org.gnome.Connections
-        - org.gnome.Contacts
-        - org.gnome.Maps
-        - org.gnome.clocks
-    user: {} # Also add Flathub user repo, but no user packages
+    configurations:
+      - notify: true
+        scope: system
+        install:
+          - org.gnome.World.PikaBackup
+          - com.spotify.Client
+          - org.qbittorrent.qBittorrent
+          - com.github.xournalpp.xournalpp
+          - com.github.rafostar.Clapper
+          - org.gnome.Loupe
+          - org.gnome.Papers
+          - org.gnome.Extensions
+          - ca.desrt.dconf-editor
+          - io.github.flattool.Warehouse
+          - com.github.tchx84.Flatseal
 
   - type: bling
     install:
