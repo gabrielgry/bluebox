@@ -49,6 +49,7 @@ modules:
         - zoxide
         - lsd # ls alternative with icon support
         - rEFInd
+        - xdg-terminal-exec
         - google-chrome-stable
         - gnome-themes-extra # Gtk 3 themes
         - gnome-shell-extension-appindicator
