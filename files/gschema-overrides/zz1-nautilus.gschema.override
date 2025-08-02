@@ -1,0 +1,11 @@
+[org.gnome.nautilus.icon-view]
+captions=['size','none','none']
+
+[org.gnome.nautilus.list-view]
+default-visible-columns=['name','size','owner','permissions','date_modified']
+default-zoom-level='small'
+use-tree-view=true
+
+[org.gnome.nautilus.preferences]
+default-folder-viewer='list-view'
+show-delete-permanently=true
