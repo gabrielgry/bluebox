@@ -19,7 +19,7 @@ fi
 # --- Main Logic ---
 API_URL="https://api.github.com/repos/$REPO/releases/latest"
 
-DOWNLOAD_URL=$(curl -s "$API_URL" | jq -r ".assets[] | select(.name | contains(\"$ARCH_PATTERN\") and endswith(\".tar.gz\")) | .browser_download_url")
+DOWNLOAD_URL=$(curl -s "$API_URL" | jq -r ".assets[] | select(.name | test(\"$ARCH_PATTERN\"; \"i\") and test(\".tar.gz$\"; \"i\")) | .browser_download_url")
 
 if [ -z "$DOWNLOAD_URL" ]; then
   echo "Error: Could not find a download URL for the $ARCH_PATTERN architecture." >&2
