@@ -32,6 +32,9 @@ modules:
         - vscode.repo
       keys:
         - https://packages.microsoft.com/keys/microsoft.asc
+    group-install:
+      packages:
+        - c-development
     install:
       packages:
         - code
@@ -49,6 +52,7 @@ modules:
         - zoxide
         - lsd # ls alternative with icon support
         - rEFInd
+        - graphviz
         - xdg-terminal-exec
         - google-chrome-stable
         - gnome-themes-extra # Gtk 3 themes
