@@ -49,6 +49,8 @@ modules:
         - ripgrep
         - trash-cli
         - nodejs
+        - pip
+        - texlive-scheme-full
         - zoxide
         - lsd # ls alternative with icon support
         - rEFInd
