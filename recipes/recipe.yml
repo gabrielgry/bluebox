@@ -50,6 +50,8 @@ modules:
         - trash-cli
         - nodejs
         - pip
+        - dotnet-sdk-9.0
+        - java-latest-openjdk
         - texlive-scheme-full
         - zoxide
         - lsd # ls alternative with icon support
