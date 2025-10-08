@@ -35,6 +35,8 @@ modules:
     group-install:
       packages:
         - c-development
+        - cosmic-desktop
+        - cosmic-desktop-apps
     install:
       packages:
         - code
