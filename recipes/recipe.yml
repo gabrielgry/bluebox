@@ -54,7 +54,7 @@ modules:
         - pip
         - dotnet-sdk-9.0
         - java-latest-openjdk
-        - texlive-scheme-full
+        # - texlive-scheme-full # Installed as overlay
         - zoxide
         - lsd # ls alternative with icon support
         - rEFInd
