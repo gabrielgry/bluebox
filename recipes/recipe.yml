@@ -51,14 +51,9 @@ modules:
         - ripgrep
         - trash-cli
         - nodejs
-        - pip
-        - dotnet-sdk-9.0
-        - java-latest-openjdk
-        # - texlive-scheme-full # Installed as overlay
         - zoxide
         - lsd # ls alternative with icon support
         - rEFInd
-        - graphviz
         - xdg-terminal-exec
         - google-chrome-stable
         - gnome-themes-extra # Gtk 3 themes
@@ -117,7 +112,7 @@ modules:
 
   - type: gschema-overrides
     include:
-      - zz1-gnome-settings.gschema.override 
+      - zz1-gnome-settings.gschema.override
       - zz1-gnome-extensions.gschema.override
 
   - type: chezmoi
