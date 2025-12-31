@@ -18,8 +18,8 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: script
-    snippets:
-      - dnf5 config-manager setopt google-chrome.enabled=1
+    # snippets:
+    #   - dnf5 config-manager setopt google-chrome.enabled=1
     scripts:
       - lazygit.sh
 
@@ -55,7 +55,8 @@ modules:
         - lsd # ls alternative with icon support
         - rEFInd
         - xdg-terminal-exec
-        - google-chrome-stable
+        # - google-chrome-stable
+        - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
         - gnome-themes-extra # Gtk 3 themes
         - gnome-shell-extension-appindicator
     remove:
