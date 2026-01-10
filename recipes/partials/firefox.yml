@@ -1,0 +1,20 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: files
+    files:
+      - source: system/firefox
+        destination: /
+
+  - type: dnf
+    remove:
+      packages:
+        - fedora-bookmarks
+
+  - type: script
+    snippets:
+      - rm -f /usr/share/epiphany/default-bookmarks.rdf
+      - >
+        sed -i -e '$a\' /etc/environment &&
+        printf 'MOZ_DISABLE_RDD_SANDBOX=1\n' >> /etc/environment

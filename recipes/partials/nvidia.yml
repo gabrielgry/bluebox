@@ -1,0 +1,16 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: script
+    snippets:
+      - >
+        sed -i -e '$a\' /etc/environment &&
+        printf 'NVD_BACKEND=direct\n' >> /etc/environment
+
+  - type: kargs
+    arch: x86_64
+    kargs:
+      - nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1
+      - nvidia.NVreg_PreserveVideoMemoryAllocations=1
+      - nvidia.NVreg_TemporaryFilePath=/var/tmp

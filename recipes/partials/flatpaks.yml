@@ -1,0 +1,18 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: default-flatpaks
+    configurations:
+      - notify: false
+        scope: user
+        install:
+          - org.gnome.World.PikaBackup
+          - com.spotify.Client
+          - org.qbittorrent.qBittorrent
+          - org.gnome.Loupe
+          - org.gnome.Papers
+          - ca.desrt.dconf-editor
+          - io.github.flattool.Warehouse
+          - com.github.tchx84.Flatseal
+          - org.localsend.localsend_app

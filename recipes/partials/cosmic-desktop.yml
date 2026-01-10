@@ -1,0 +1,35 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - ryanabx/cosmic-epoch
+    install:
+      packages:
+        - cosmic-session
+        - cosmic-greeter
+        - cosmic-comp
+        - cosmic-panel
+        - cosmic-launcher
+        - cosmic-applets
+        - cosmic-settings
+        - cosmic-files
+        - cosmic-edit
+        - cosmic-term
+        - cosmic-workspaces
+    remove:
+      packages:
+        - gnome-classic-session
+        - gnome-shell
+        - gnome-shell-extension*
+        - gnome-terminal
+        - gnome-software
+        - gnome-control-center
+        - nautilus
+        - gdm
+
+  - type: script
+    scripts:
+      - add-cosmic-session.sh

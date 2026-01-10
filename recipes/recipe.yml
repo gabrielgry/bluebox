@@ -1,133 +1,31 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v2.json
-# image will be published to ghcr.io/gabrielgry/bluebox
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
 name: bluebox
-# description will be included in the image's metadata
 description: This is my personal OS image.
 
-# the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-nvidia
-image-version: 43 # latest is also supported if you want new updates ASAP
+image-version: 43
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
-  - type: script
-    # snippets:
-    #   - dnf5 config-manager setopt google-chrome.enabled=1
-    scripts:
-      - lazygit.sh
+      - source: system/common
+        destination: /
 
   - type: dnf
-    repos:
-      copr:
-        - scottames/ghostty
-        - monkeygold/nautilus-open-any-terminal
-      files:
-        - vscode.repo
-      keys:
-        - https://packages.microsoft.com/keys/microsoft.asc
-    group-install:
-      packages:
-        - c-development
-        - cosmic-desktop
-        - cosmic-desktop-apps
     install:
       packages:
-        - code
-        - ghostty
-        - nautilus-python # Dependency for "Open in Ghostty" in Nautilus
-        - zsh
-        - fzf
-        - fd
-        - rustup
         - git
-        - neovim
-        - ripgrep
-        - trash-cli
-        - nodejs
-        - zoxide
-        - lsd # ls alternative with icon support
-        - rEFInd
-        - xdg-terminal-exec
-        # - google-chrome-stable
-        - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-        - gnome-themes-extra # Gtk 3 themes
-        - gnome-shell-extension-appindicator
-    remove:
-      packages:
-        - gnome-shell-extension-window-list
-        - gnome-shell-extension-background-logo
-        - gnome-shell-extension-launch-new-instance
-        - gnome-shell-extension-places-menu
-        - gnome-shell-extension-apps-menu
-        - gnome-classic-session
-        - fedora-bookmarks
-        - ptyxis
-    optfix:
-      - google
+        - git-subtree
 
-  - type: script
-    snippets:
-      - dnf5 config-manager setopt google-chrome.enabled=0
-      - rm -f /usr/share/epiphany/default-bookmarks.rdf
-    scripts: []
+  - from-file: partials/brew.yml
+  - from-file: partials/vscode.yml
+  - from-file: partials/firefox.yml
+  - from-file: partials/1password.yml
+  - from-file: partials/flatpaks.yml
+  - from-file: partials/gnome.yml
+  - from-file: partials/refind.yml
+  - from-file: partials/nvidia.yml
 
-  - type: default-flatpaks
-    configurations:
-      - notify: true
-        scope: system
-        install:
-          - org.gnome.World.PikaBackup
-          - com.spotify.Client
-          - org.qbittorrent.qBittorrent
-          - com.github.xournalpp.xournalpp
-          - com.github.rafostar.Clapper
-          - org.gnome.Loupe
-          - org.gnome.Papers
-          - org.gnome.Extensions
-          - ca.desrt.dconf-editor
-          - io.github.flattool.Warehouse
-          - com.github.tchx84.Flatseal
-          - org.localsend.localsend_app
-
-  - type: bling
-    install:
-      - 1password
-      - dconf-update-service
-
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - JetBrainsMono
-
-  - type: gnome-extensions
-    install:
-      - 1262 # Bing Wallpaper
-      - 1460 # Vitals
-
-  - type: gschema-overrides
-    include:
-      - zz1-gnome-settings.gschema.override
-      - zz1-gnome-extensions.gschema.override
-
-  - type: chezmoi
-    repository: "https://github.com/gabrielgry/dotfiles"
-    all-users: true
-    disable-update: true
-    file-conflict-policy: replace
-
-  - type: kargs
-    arch: x86_64
-    kargs:
-      - nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1
-      - nvidia.NVreg_PreserveVideoMemoryAllocations=1
-      - nvidia.NVreg_TemporaryFilePath=/var/tmp
-
-  - type: initramfs
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: signing
