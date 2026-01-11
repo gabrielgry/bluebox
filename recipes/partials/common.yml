@@ -1,0 +1,14 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: files
+    files:
+      - source: system/common
+        destination: /
+
+  - type: script
+    snippets:
+      - >
+        sed -i -e '$a\' /etc/environment &&
+        printf 'EDITOR=vim\nVISUAL=vim\n' >> /etc/environment

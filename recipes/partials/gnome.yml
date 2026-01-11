@@ -1,0 +1,58 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: files
+    files:
+      - source: system/gnome
+        destination: /
+
+  - type: script
+    snippets:
+      - >
+        sed -i -e '$a\' /etc/environment &&
+        printf 'GNOME_SHELL_SLOWDOWN_FACTOR=0.8\n' >> /etc/environment
+
+  - type: dnf
+    install:
+      packages:
+        - openssh-askpass
+        - gnome-themes-extra # Gtk 3 themes
+        - gnome-shell-extension-appindicator
+    remove:
+      packages:
+        - gnome-shell-extension-window-list
+        - gnome-shell-extension-background-logo
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-places-menu
+        - gnome-shell-extension-apps-menu
+        - gnome-classic-session
+
+  - type: default-flatpaks
+    configurations:
+      - notify: false
+        scope: system
+        install:
+          - org.gnome.Extensions
+
+  - type: bling
+    install:
+      - dconf-update-service
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono
+        - CascadiaCode
+
+  - type: gnome-extensions
+    install:
+      - 307  # Dash to Dock
+      - 1262 # Bing Wallpaper
+      - 1460 # Vitals
+      - 3193 # Blur my Shell
+
+  - type: gschema-overrides
+    include:
+      - zz1-gnome-settings.gschema.override
+      - zz1-gnome-extensions.gschema.override
