@@ -21,7 +21,8 @@ modules:
 
   - from-file: partials/common.yml
   - from-file: partials/brew.yml
-  - from-file: partials/vscode.yml
+  # - from-file: partials/vscode.yml
+  - from-file: partials/zed.yml
   - from-file: partials/firefox.yml
   - from-file: partials/1password.yml
   - from-file: partials/flatpaks.yml
