@@ -19,6 +19,7 @@ modules:
         - git
         - git-subtree
 
+  - from-file: partials/common.yml
   - from-file: partials/brew.yml
   - from-file: partials/vscode.yml
   - from-file: partials/firefox.yml
@@ -26,6 +27,7 @@ modules:
   - from-file: partials/flatpaks.yml
   - from-file: partials/gnome.yml
   - from-file: partials/refind.yml
+  - from-file: partials/grub.yml
   - from-file: partials/nvidia.yml
 
   - type: signing

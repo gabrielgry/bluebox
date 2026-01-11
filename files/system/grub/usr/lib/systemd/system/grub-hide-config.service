@@ -1,0 +1,13 @@
+[Unit]
+Description=Hide GRUB menu
+ConditionPathExists=!/boot/grub2/user.cfg
+After=boot.mount
+Requires=boot.mount
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'printf "set timeout=0\nset timeout_style=hidden\n" > /boot/grub2/user.cfg'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

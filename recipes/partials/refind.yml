@@ -18,6 +18,6 @@ modules:
       - git clone https://github.com/gabrielgry/refind-theme-oled.git /usr/share/ublue-os/refind/refind-theme-oled
       - rm -rf /usr/share/ublue-os/refind/refind-theme-oled/.git
       - rm -rf /usr/share/ublue-os/refind/README.md
-      - find /usr/share/ublue-os/refind/refind-theme-oled/fonts -mindepth 1 ! -name 'source-code-pro-extralight-14.png' -exec rm -rf {} +
-      - find /usr/share/ublue-os/refind/refind-theme-oled/icons -mindepth 1 ! -name '128-48' -exec rm -rf {} +
+      - find /usr/share/ublue-os/refind/refind-theme-oled/fonts -mindepth 1 -maxdepth 1 ! -name 'source-code-pro-extralight-14.png' -exec rm -rf {} +
+      - find /usr/share/ublue-os/refind/refind-theme-oled/icons -mindepth 1 -maxdepth 1 ! -name '128-48' -exec rm -rf {} +
       - systemctl enable refind-setup.service
