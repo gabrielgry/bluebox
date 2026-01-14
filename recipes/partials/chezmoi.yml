@@ -4,6 +4,7 @@
 modules:
   - type: chezmoi
     repository: "https://github.com/gabrielgry/dotfiles"
+    branch: "fedora-silverblue"
     all-users: true
     disable-update: true
     file-conflict-policy: replace

@@ -12,7 +12,6 @@ modules:
           - org.qbittorrent.qBittorrent
           - org.gnome.Loupe
           - org.gnome.Papers
-          - ca.desrt.dconf-editor
           - io.github.flattool.Warehouse
           - com.github.tchx84.Flatseal
           - org.localsend.localsend_app

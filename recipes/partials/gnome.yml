@@ -33,7 +33,7 @@ modules:
       - notify: false
         scope: system
         install:
-          - org.gnome.Extensions
+          - com.mattjakeman.ExtensionManager
 
   - type: bling
     install:
@@ -47,7 +47,8 @@ modules:
 
   - type: gnome-extensions
     install:
-      - 307  # Dash to Dock
+      - 307 # Dash to Dock
+      - 779 # Clipboard Indicator
       - 1262 # Bing Wallpaper
       - 1460 # Vitals
       - 3193 # Blur my Shell

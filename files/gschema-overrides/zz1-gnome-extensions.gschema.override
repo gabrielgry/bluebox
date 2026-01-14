@@ -1,5 +1,5 @@
 [org.gnome.shell]
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com','Vitals@CoreCoding.com','BingWallpaper@ineffable-gmail.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com','Vitals@CoreCoding.com','BingWallpaper@ineffable-gmail.com','blur-my-shell@aunetx','dash-to-dock@micxgx.gmail.com','clipboard-indicator@tudmotu.com']
 
 [org.gnome.shell.extensions.bingwallpaper]
 hide=true
