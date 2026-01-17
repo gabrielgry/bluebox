@@ -7,6 +7,20 @@ modules:
       - source: system/common
         destination: /
 
+  - type: dnf
+    install:
+      packages:
+        - git
+        - git-subtree
+        - git-credential-libsecret
+        - zsh
+
+    remove:
+      packages:
+        - fedora-bookmarks
+        - fedora-chromium-config
+        - fedora-chromium-config-gnome
+
   - type: script
     snippets:
       - >

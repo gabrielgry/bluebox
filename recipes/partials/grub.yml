@@ -9,4 +9,4 @@ modules:
 
   - type: script
     snippets:
-      - systemctl enable grub-hide-config.service
+      - systemctl enable bluebox-grub-config.service

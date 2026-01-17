@@ -7,11 +7,6 @@ modules:
       - source: system/firefox
         destination: /
 
-  - type: dnf
-    remove:
-      packages:
-        - fedora-bookmarks
-
   - type: script
     snippets:
       - rm -f /usr/share/epiphany/default-bookmarks.rdf

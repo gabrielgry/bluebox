@@ -13,6 +13,7 @@ volume-step=2
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
 idle-dim=false
+power-button-action='interactive'
 
 [org.gnome.mutter:GNOME]
 dynamic-workspaces=false
@@ -21,6 +22,21 @@ experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling', '
 [org.gnome.desktop.wm.preferences]
 num-workspaces=10
 auto-raise=true
+button-layout="appmenu:minimize,maximize,close"
+
+[org.gnome.desktop.search-providers]
+enabled=['io.github.kolunmi.Bazaar.desktop']
+
+[org.gtk.Settings.FileChooser]
+sort-directories-first=true
+
+[org.gtk.gtk4.Settings.FileChooser]
+sort-directories-first=true
+
+[org.gnome.software]
+allow-updates=false
+download-updates=false
+download-updates-notify=false
 
 #[org.gnome.shell.keybindings]
 #switch-to-application-1=['<Shift><Super><Control>1']

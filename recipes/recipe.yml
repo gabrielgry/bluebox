@@ -8,18 +8,8 @@ base-image: ghcr.io/ublue-os/silverblue-nvidia
 image-version: 43
 
 modules:
-  - type: files
-    files:
-      - source: system/common
-        destination: /
-
-  - type: dnf
-    install:
-      packages:
-        - git
-        - git-subtree
-
   - from-file: partials/common.yml
+  - from-file: partials/fonts.yml
   - from-file: partials/brew.yml
   - from-file: partials/zed.yml
   - from-file: partials/firefox.yml
