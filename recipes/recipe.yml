@@ -13,6 +13,7 @@ modules:
   - from-file: partials/brew.yml
   - from-file: partials/zed.yml
   - from-file: partials/firefox.yml
+  - from-file: partials/chrome.yml
   - from-file: partials/1password.yml
   - from-file: partials/flatpaks.yml
   - from-file: partials/gnome.yml
