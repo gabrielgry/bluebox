@@ -20,6 +20,7 @@ modules:
   - from-file: partials/refind.yml
   - from-file: partials/grub.yml
   - from-file: partials/nvidia.yml
+  - from-file: partials/via.yml
   - from-file: partials/chezmoi.yml
 
   - type: signing
