@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+GROUP="docker"
+SOURCE_GROUP="wheel"
+
+getent group "$GROUP" >/dev/null || exit 0
+
+wheel_users=$(getent group "$SOURCE_GROUP" | cut -d ':' -f 4 | tr ',' ' ')
+
+for user in $wheel_users; do
+  [[ -z "$user" ]] && continue
+
+  if ! id -nG "$user" | grep -qw "$GROUP"; then
+    echo "Adding $user to $GROUP"
+    usermod -aG "$GROUP" "$user"
+  fi
+done

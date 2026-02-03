@@ -16,6 +16,7 @@ modules:
   - from-file: partials/chrome.yml
   - from-file: partials/1password.yml
   - from-file: partials/flatpaks.yml
+  - from-file: partials/docker.yml
   - from-file: partials/gnome.yml
   - from-file: partials/refind.yml
   - from-file: partials/grub.yml
