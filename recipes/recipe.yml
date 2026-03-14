@@ -12,6 +12,7 @@ modules:
   - from-file: partials/fonts.yml
   - from-file: partials/brew.yml
   - from-file: partials/zed.yml
+  - from-file: partials/vscode.yml
   - from-file: partials/firefox.yml
   - from-file: partials/chrome.yml
   - from-file: partials/1password.yml
