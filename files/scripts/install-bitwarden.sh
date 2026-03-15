@@ -13,10 +13,14 @@ DESKTOP_RPM_URL=$(jq -r '
 ' <<<"$RELEASES")
 
 CLI_LINUX_URL=$(jq -r '
-    [.[]
-      | .assets[]
-      | select(.name | startswith("bw-linux-") and endswith(".zip"))
-    ] | max_by(.created_at | fromdate).browser_download_url
+  [.[]
+    | .assets[]
+    | select(
+        (.name | startswith("bw-linux-")
+        and endswith(".zip"))
+        and (.name | test("arm") | not)
+      )
+  ] | max_by(.created_at | fromdate).browser_download_url
 ' <<<"$RELEASES")
 
 [[ -n "$DESKTOP_RPM_URL" ]] || { echo "Desktop RPM not found"; exit 1; }
