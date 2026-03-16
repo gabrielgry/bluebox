@@ -19,6 +19,7 @@ modules:
         - openssh-askpass
         - gnome-themes-extra # Gtk 3 themes
         - gnome-shell-extension-appindicator
+        - gnome-shell-extension-gsconnect
     remove:
       packages:
         - gnome-shell-extension-window-list
@@ -51,6 +52,7 @@ modules:
       - 1262 # Bing Wallpaper
       - 1460 # Vitals
       - 3193 # Blur my Shell
+      - 7065 # Tiling Shell
 
   - type: gschema-overrides
     include:
