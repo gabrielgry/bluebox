@@ -5,4 +5,4 @@ modules:
   - type: dnf
     install:
       packages:
-        - openvswitch
+        - mininet
