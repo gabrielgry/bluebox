@@ -1,0 +1,14 @@
+[Unit]
+Description=Add wheel users to libvirt group
+After=sysusers.target
+ConditionPathExists=/usr/lib/systemd/system/libvirtd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/ublue-os/bin/bluebox-libvirt-group
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

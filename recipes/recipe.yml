@@ -24,6 +24,6 @@ modules:
   - from-file: partials/nvidia.yml
   - from-file: partials/via.yml
   - from-file: partials/chezmoi.yml
-  - from-file: partials/mininet.yml
+  - from-file: partials/vm.yml
 
   - type: signing
