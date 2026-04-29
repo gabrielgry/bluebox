@@ -17,7 +17,7 @@ modules:
     install:
       packages:
         - openssh-askpass
-        - gnome-themes-extra # Gtk 3 themes
+        - adw-gtk3-theme
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-gsconnect
     remove:
