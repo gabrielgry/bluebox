@@ -1,6 +1,7 @@
 [Unit]
 Description=Install rEFInd theme to ESP
 ConditionPathExists=/usr/bin/refind-install
+ConditionPathExists=!/boot/efi/EFI/refind/themes/refind-theme-oled/theme.conf
 After=boot.mount
 Requires=boot.mount
 
@@ -9,7 +10,9 @@ Type=oneshot
 ExecStart=/usr/bin/refind-install --yes
 ExecStart=/usr/bin/install -d /boot/efi/EFI/refind/themes
 ExecStart=/usr/bin/cp -a /usr/share/ublue-os/refind/refind-theme-oled /boot/efi/EFI/refind/themes/
-ExecStart=/usr/bin/sed -i 's|^#.*include .*|include themes/refind-theme-oled/theme.conf|' /boot/efi/EFI/refind/refind.conf
+
+ExecStart=/usr/bin/bash -c "grep -qxF 'include themes/refind-theme-oled/theme.conf' /boot/efi/EFI/refind/refind.conf || echo 'include themes/refind-theme-oled/theme.conf' >> /boot/efi/EFI/refind/refind.conf"
+
 RemainAfterExit=yes
 
 [Install]
