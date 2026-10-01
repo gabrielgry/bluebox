@@ -25,5 +25,6 @@ modules:
   - from-file: partials/via.yml
   - from-file: partials/chezmoi.yml
   - from-file: partials/vm.yml
+  - from-file: partials/hp-printer.yml
 
   - type: signing
