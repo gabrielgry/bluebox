@@ -6,4 +6,4 @@ modules:
     install:
       packages:
         - hplip
-        - hplib-gui
+        - hplip-gui
