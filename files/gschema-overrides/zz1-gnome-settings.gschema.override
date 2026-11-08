@@ -17,7 +17,6 @@ power-button-action='interactive'
 
 [org.gnome.mutter]
 dynamic-workspaces=false
-experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling', 'kms-modifiers']
 
 [org.gnome.desktop.wm.preferences]
 num-workspaces=10
