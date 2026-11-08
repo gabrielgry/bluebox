@@ -15,7 +15,7 @@ sleep-inactive-battery-type='nothing'
 idle-dim=false
 power-button-action='interactive'
 
-[org.gnome.mutter:GNOME]
+[org.gnome.mutter]
 dynamic-workspaces=false
 experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling', 'kms-modifiers']
 
